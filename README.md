@@ -1,10 +1,8 @@
 # Deep Learning
 
-**Language**: Python.
+**Language**: Python
 
-**Introduction**: 
-
-The aim of this project is to investigate a number of Deep Learning methods in the context of text processing and text classification. This task uses a dataset of articles extracted from The Guardian newspaper, and aims to predict the broader section from which an article was taken.
+**Introduction**: The aim of this project is to investigate a number of Deep Learning methods in the context of text processing and text classification. This task uses a dataset of articles extracted from The Guardian newspaper, and aims to predict the broader section from which an article was taken.
 
 The dataset, taken from Kaggle, contains 148,731 newspaper articles scraped from The Guardian website, and dating from between January 2016 and June 2022. In the original dataset, there were 159 sections. Quite a number of the original sections contained very few articles, and had oddly specific titles. I have chosen to remove these sections, and to focus on the four most popular: Football, Opinion, Sport, and World News. By narrowing the focus to these four sections, we can still investigate the ability of the models to discern text from related as well as from distinct sections, but we maximise the number of available training examples for each section, which is important for machine learning in general and neural networks in particular. This also permits us to solve the slight imbalance problem through under-sampling while still preserving a sizeable dataset.
 
@@ -14,6 +12,4 @@ The pre-processing of the input data also included the selection of a number of 
 
 Next, we build the model. The optimum architecture was a hybrid CNN-LSTM model with an embedding layer, two CNN layers (the first with 256 filters and a kernel of size 4, and the second with 64 filters and a kernel of 8) with two intermediate pooling layers, then two LSTM layers (the first with state size of 16 and the second of 32), a hidden layer with 350 neurons, and an output layer with a softmax activation function, since each article will be classified with a single label. I opted for a Categorical Crossentropy loss function, the adam optimiser, and accuracy as our primary evaluation metric. In addition, we also employ dropout, regularisation, and early-stopping to prevent overfitting.
 
-**Data Files**: 
-
-The Guardian Article dataset comes from here: https://www.kaggle.com/datasets/adityakharosekar2/guardian-news-articles
+**Data Files**: The Guardian Article dataset comes from here: https://www.kaggle.com/datasets/adityakharosekar2/guardian-news-articles
