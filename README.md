@@ -1,10 +1,8 @@
 # Deep Learning
 
-Language: R.
+**Language**: Python.
 
-Introduction: This is a detailed analysis and visualisation of data relating to the COVID-19 pandemic in Ireland in early January, 2022, in terms of the number of cases among the general population and among healthcare workers, the number of hospitalisations, the number of ICU admissions, and the number of deaths, using daily figures released by the Health Service Executive (HSE) and the Health Protection Surveillance Centre (HPSC), and also using statistical information taken from the Computerised Infectious Disease Reporting (CIDR) system, alongside an analysis of excess deaths using data from rip.ie.
-
-Data Files: There are four datasets. COVID17.csv is the primary dataset containing the 17th release of COVID-related data; RIP0117.csv, RIP0217.csv, and RIP0317.csv contain the data from rip.ie.
+**Introduction**: 
 
 The aim of this project is to investigate a number of Deep Learning methods in the context of text processing and text classification. This task uses a dataset of articles extracted from The Guardian newspaper, and aims to predict the broader section from which an article was taken.
 
@@ -15,5 +13,7 @@ It is necessary to convert the raw text data into a form which can feed into a d
 The pre-processing of the input data also included the selection of a number of parameters. These parameters were standardised to allow for effective comparison among models. Ultimately, these were chosen through a combination of grid-search and trial-and-error. One of these parameters relates to padding, and dictates the maximum and minimum length of the input sequence representing each article. This was set to 250. Another parameter, this time setting the maximum size of the vocabulary of words, was set to 1500. Finally, the dimensionality of the on-the-fly embedding vectors was chosen to be 8. Naively, an increase in these numbers might be expected to increase the accuracy of the models as they are permitted to capture more information, but experiment yielded little improvement. This, as always, must also be balanced against the use of more computational resources and a longer training process.
 
 Next, we build the model. The optimum architecture was a hybrid CNN-LSTM model with an embedding layer, two CNN layers (the first with 256 filters and a kernel of size 4, and the second with 64 filters and a kernel of 8) with two intermediate pooling layers, then two LSTM layers (the first with state size of 16 and the second of 32), a hidden layer with 350 neurons, and an output layer with a softmax activation function, since each article will be classified with a single label. I opted for a Categorical Crossentropy loss function, the adam optimiser, and accuracy as our primary evaluation metric. In addition, we also employ dropout, regularisation, and early-stopping to prevent overfitting.
+
+**Data Files**: 
 
 The Guardian Article dataset comes from here: https://www.kaggle.com/datasets/adityakharosekar2/guardian-news-articles
