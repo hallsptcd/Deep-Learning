@@ -1,6 +1,6 @@
 # Deep-Learning
 
-The aim of this project is to investigate of a number of Deep Learning methods in the context of text processing and text classification. This task uses a dataset of articles extracted from The Guardian newspaper, and aims to predict the broader section from which an article was taken. The sections'Football' 'Opinion' 'Sport' 'World news'] 
+The aim of this project is to investigate a number of Deep Learning methods in the context of text processing and text classification. This task uses a dataset of articles extracted from The Guardian newspaper, and aims to predict the broader section from which an article was taken. The sections'Football' 'Opinion' 'Sport' 'World news'] 
 
 The dataset, taken from Kaggle, contains 148,731 newspaper articles scraped from The Guardian website, and dating from between January 2016 and June 2022. In the original dataset, there were 159 sections. Quite a number of the original sections contained very few articles, and had oddly specific titles. I have chosen to remove these sections, and to focus on the four most popular: Football, Opinion, Sport, and World News. By narrowing the focus to these four sections, we can still investigate the ability of the models to discern text from related as well as from distinct sections, but we maximise the number of available training examples for each section, which is important for machine learning in general and neural networks in particular. This also permits us to solve the slight imbalance problem through under-sampling while still preserving a sizeable dataset.
 
