@@ -1,6 +1,6 @@
 # Text Classification using Deep Learning
 
-**Language**: Python
+**Language**: Python (TensorFlow/Keras)
 
 **Introduction**: The aim of this project is to investigate a number of Deep Learning methods in the context of text processing and text classification. This task uses a dataset of articles extracted from The Guardian newspaper, and aims to predict the broader section from which an article was taken.
 
