@@ -1,4 +1,4 @@
-# Deep Learning
+# Text Classification using Deep Learning
 
 **Language**: Python
 
