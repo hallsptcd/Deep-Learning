@@ -1,4 +1,4 @@
-# Text Classification using Deep Learning
+# Text Classification with Deep Learning
 
 **Language**: Python (TensorFlow/Keras)
 
